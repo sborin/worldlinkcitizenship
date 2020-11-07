@@ -1,0 +1,438 @@
+<?php
+include('include/function.php');
+include('include/email/email.php');
+global $db;
+$db = new db();
+?>
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>WorldLink Citizenship Consultant</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/visa.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+
+  </head>
+  <body>
+
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body"> 
+        <div class="cssload-jumping"><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse">
+              <div class="rd-navbar-aside">
+                <div class="header-info">
+                  <ul class="list-inline list-inline-md">
+                    <li>
+                      <div class="unit unit-spacing-xs align-items-center">
+                        <div class="unit-left font-weight-bold">Information Service:</div>
+                        <div class="unit-body"><a href="tel:#">(855)93 85 85 75</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-spacing-xs align-items-center">
+                        <div class="unit-left font-weight-bold">Working Hours: </div>
+                        <div class="unit-body"> Mon-Sat: 8am - 5pm</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="social-block">
+                  <ul class="list-inline">
+                    <li><a class="icon fa-facebook" href="https://www.facebook.com/woldlinkcitizenshipconsultant.cambodia/" target="_blank"></a></li>
+                    <li><a class="icon fa-twitter" href="https://www.facebook.com/woldlinkcitizenshipconsultant.cambodia/" target="_blank"></a></li>
+                    <li><a class="icon" href="https://www.angkorrealestate.com/" target="_blank"><img src="https://www.angkorrealestate.com/templates/daily_realty/favicon.ico" alt="C-A-R-E"></a></li>
+                    <li><a class="icon fa-youtube" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo-dark-main-257x84.png" alt="" width="257" height="84"/></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="visa.html">Visa</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="visa-app.php">Visa Application Online</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Citizenship</a></li>
+                      <!--<li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Overseas immigration</a></li>-->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+      <section class="section-page-title section-brighter">
+        <div class="container">
+          <h1 style="color:#fff">Visa Application Online</h1>
+        </div>
+      </section>
+    
+
+
+      
+<!--apply-visa-online-content-->
+<div class="section visa-section">
+    <div class="container">
+        <div class="row">
+            <div class="content-wrap content-wrap-secondary-left-right">
+                <h4 class="text-center">
+                    <strong
+                        lang="en"
+                        data-lang-token="page.visa.contents.banner.2.title"
+                    >
+                        Apply Visa Online
+                    </strong>
+                </h4>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                       <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-first-name"
+                                                type="text"
+                                                name="first_name"
+                                                class="form-control"
+                                                title="First Name"
+                                                placeholder="First Name"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-last-name"
+                                                type="text"
+                                                name="last_name"
+                                                class="form-control"
+                                                placeholder="Last Name"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-2">
+                                    <div class="form-group">
+                                        <select
+                                            name="gender"
+                                            class="form-control"
+                                            id="form-visa-client-gender"
+                                        >
+                                            <option
+                                                value="Male"
+                                                lang="en"
+                                                data-lang-token="page.visa.form.selection.gender.option.1"
+                                            >
+                                                Male
+                                            </option>
+                                            <option
+                                                value="Female"
+                                                lang="en"
+                                                data-lang-token="page.visa.form.selection.gender.option.2"
+                                            >
+                                                Female
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-2">
+                                    <div class="form-group">
+                                        <input
+                                            required
+                                            id="form-visa-client-nationality"
+                                            type="text"
+                                            name="nationality"
+                                            class="form-control"
+                                            placeholder="Nationality"
+                                            lang="en"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-dob"
+                                                type="text"
+                                                name="DOB"
+                                                class="form-control"
+                                                placeholder="Date of birth (dd/mm/yyyy)"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-pencil"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-status"
+                                                type="text"
+                                                name="Status"
+                                                class="form-control"
+                                                placeholder="Status"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <textarea
+                                            required
+                                            id="form-visa-client-birth-place"
+                                            name="place_of_birth"
+                                            class="form-control"
+                                            placeholder="Place of birth"
+                                            lang="en"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <textarea
+                                            required
+                                            id="form-visa-client-permanent-address"
+                                            name="permanent_address"
+                                            class="form-control"
+                                            placeholder="Permanent address"
+                                            lang="en"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-briefcase"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-current-job"
+                                                type="text"
+                                                name="current_job"
+                                                id="current_job"
+                                                class="form-control"
+                                                placeholder="Current job"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-phone"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-phone-number"
+                                                type="phone"
+                                                name="phone_number"
+                                                id="phone_number"
+                                                class="form-control"
+                                                placeholder="Mobile"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-envelope"></i>
+                                            </span>
+                                            <input
+                                                required
+                                                id="form-visa-client-email"
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                class="form-control"
+                                                placeholder="Email"
+                                                lang="en"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-book"></i>
+                                            </span>
+                                            <select
+                                                required
+                                                id="form-visa-client-visa-type"
+                                                name="visa_type"
+                                                class="form-control"
+                                                onchange="LoadContent.change_visa_duration(this)"
+                                            >
+                                                <option
+                                                    value="Visa-E"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.type.option.1"
+                                                >
+                                                    Visa E
+                                                </option>
+                                                <option
+                                                    value="Visa-T"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.type.option.2"
+                                                >
+                                                    Visa T
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-hourglass"></i>
+                                            </span>
+                                            <select
+                                                id="form-visa-client-visa-duration"
+                                                name="visa_duration"
+                                                class="form-control"
+                                            >
+                                                <option
+                                                    value="1 month"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.duration.option.1"
+                                                >
+                                                    1 month
+                                                </option>
+                                                <option
+                                                    value="3 months"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.duration.option.2"
+                                                >
+                                                    3 months
+                                                </option>
+                                                <option
+                                                    value="6 months"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.duration.option.3"
+                                                >
+                                                    6 months
+                                                </option>
+                                                <option
+                                                    value="1 year"
+                                                    lang="en"
+                                                    data-lang-token="page.visa.form.selection.visa.duration.option.4"
+                                                >
+                                                    1 year
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea
+                                            id="form-visa-client-comments"
+                                            name="additional_comments"
+                                            class="form-control"
+                                            rows="10"
+                                            placeholder="Additional Comments"
+                                            lang="en"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="btn-submit" class="btn btn-primary pull-right" type="button">Apply</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      
+      <!-- Page Footer-->      
+      <section class="bg-gray-100 section-xs text-center">
+        <div class="container">
+          <!--<p class="rights" id="footer"><span>&copy;&nbsp;</span><span class="copyright-year"></span> WorldLink Citizenship Consultant (W.C.C)</p>-->
+          <p class="rights"><span>&copy;&nbsp;</span>2014 WorldLink Citizenship Consultant (W.C.C).</p>
+        </div>
+      </section>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/apply.js"></script>
+
+  </body>
+</html>
