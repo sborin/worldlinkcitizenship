@@ -1,0 +1,181 @@
+.nav-menu {
+    padding: 5px 0 10px 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    margin: 0 1.2em;
+    font-weight: bold;
+}
+
+nav.navbar.navbar-default {
+    background: none;
+    border: none;
+    margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    padding: 10px 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+}
+
+.nav-menu .navbar-nav {
+    margin-top: 5px;
+}
+
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.nav-menu ul li a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a:focus {
+    outline: none;
+}
+
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.menu-hover-effect a {
+    padding: 10px 0;
+    text-shadow: none;
+}
+
+.menu-hover-effect a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 10px 0;
+    max-width: 0;
+    border-bottom: 2px solid #2185C5;
+    color: #2185C5;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.5s;
+    -moz-transition: max-width 0.5s;
+    -o-transition: max-width 0.5s;
+    -ms-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+}
+
+.menu-hover-effect a:hover::before,
+.menu-hover-effect a:focus::before,
+.menu-hover-effect a.active::before {
+    max-width: 100%;
+}
+
+.header-info h4 {
+    font-size: 2.8em;
+}
+
+.header-info p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    background-color: #3e454c;
+}
+
+.nav-menu ul li a {
+    display: block;
+    font-size: 1.2em;
+}
+
+.dropdown-menu {
+    background-color: rgba(62,69,76,0.5);
+    padding: 0;
+}
+
+.dropdown-menu > li > a {
+    color:#fff;
+    padding: 10px 15px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    margin-left: 16%;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #337ab7;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav > li > .visa-sub-menu {
+    margin-left: 29%;
+}
+
+.logo {
+    float: left;
+    display: block;
+    margin-right: 30px;
+
+}
+
+.logo-img {
+    width: 220px;
+}
+
+#main-menu {
+    padding-top: 45px;
+}
+
+.navbar-nav > li > .oversea-dropdown {
+    margin-left: 10%;
+}
+
+/*--responsive--*/
+@media (max-width: 768px) {
+    .header-info h4 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        padding-left: 50%;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 414px) {
+    .logo-img {
+        width: 70px;
+    }
+
+    .logo {
+        padding-left: 40%;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        padding-left: 40%;
+    }
+
+    .contact-grids {
+        left: 2%;
+        width: 96%;
+    }
+
+    .contact-grids .contact-glyphicon span {
+        font-size: 1.5em;
+    }
+
+    .contact-grids .col-xs-2 {
+        width: 9.667%;
+    }
+
+    .contact-grids .col-sm-6 {
+        padding-left: 10px;
+    }
+}
+/*--//responsive--*/
